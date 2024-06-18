@@ -1,0 +1,57 @@
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+
+
+<div class="utility-bar">
+  <div class="page-width">
+    <div class="row top-bar">
+        <div class="header-image">
+          <img height="" width="" src="https://cdn.shopify.com/s/files/1/0693/3843/1716/files/Transfers_Small_Black.png">
+        </div>
+        <div class="announcement-text">{{ section.settings.text }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="ann_under" style="background:{{ section.settings.under_color }}">&nbsp;</div>
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "class": "announcement-bar-section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_bar",
+      "default": true,
+      "label": "Show or hide Announcement bar"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "header image"
+      
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "default":"Fastest Delivery Tues, Jun. 18th if ordered in 52h 15m | FREE Shipping on Transfers $75+ | As Low as $0.02 per sq in",
+      "label": "Announcement text"
+    },{
+      "type": "color",
+      "id": "under_color",
+      "default":"#0180c2",
+      "label": "under header color"
+    }
+    
+  ],
+ 
+  "presets": [
+    
+  ]
+}
+{% endschema %}

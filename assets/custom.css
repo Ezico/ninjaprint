@@ -1,0 +1,27 @@
+.utility-bar {
+  height: 40px;
+  color: white;
+  background: black;
+}
+.header-image {
+  background: white;
+}
+.row {
+  display: flex;
+}
+.row.top-bar {
+  justify-content: space-between;
+  align-items: center;
+}
+.ann_under {
+  height: 5px;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+.header-image img {
+  width: 94px;
+  margin: 7px;
+}
